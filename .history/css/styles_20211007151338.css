@@ -1,0 +1,234 @@
+#nav_left {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+#nav_left li{
+  float: left;
+}
+
+#nav_left li img{
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	margin-bottom: 0px;
+	cursor: pointer;
+}
+
+.selected_time{
+	/* position: absolute;
+	left: 16px;
+	top: 8%; */
+	padding-left: 10px;
+}
+
+#nav_right li{
+	float: right;
+	margin-right: 10%;
+}
+
+.left,.right{
+	
+	display: inline-block;
+}
+
+ .left{
+	 float: left;
+} 
+
+.right
+{
+	float: right;
+}
+
+
+#One img{
+	width: 90%;
+	height: 70%;
+}
+
+
+#One{
+	position: absolute;
+	margin-left: 20%;
+	top: 20%;
+	
+
+}
+
+.guide{
+
+	/* position: absolute; */
+	position: absolute;
+	/* float: right; */
+	top: 15%;
+	/* right: 10px; */
+	/* right: 0; */
+	/* margin-top: 20%; */
+	/* margin-right: 30%; */
+	
+}
+
+.guide a img{
+	width: 400px;
+	height: 300px;
+}
+
+/* footer{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+} */
+
+/* Change the link color to #111 (black) on hover */
+#nav li a:hover {
+  background-color: #111;
+}
+
+/* camera preview*/
+.preview{
+	display: none; 
+    position: absolute; 
+    bottom: 45%; 
+    left: 40%; 
+    width: 360px; 
+    height: 280px; 
+    border: 10x solid black; 
+    background-color: white; 
+    z-index:1002; 
+    overflow: none;
+}
+
+.preview span{
+	position: absolute;
+	top: 10%;
+	left: 43%;
+}
+
+.light8{
+    display: block;
+}
+
+#fade1{
+    display: none;
+}
+
+.black{
+    display: none; 
+    position: absolute; 
+    top: 0%; 
+    left: 0%; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    z-index:1001; 
+    opacity:.80; 
+    filter: alpha(opacity=88); 
+}
+
+#videoElement{
+	width: 215px;
+	height: 161px;
+	position: absolute;
+	bottom: 20%;
+	left: 22%;
+}
+
+.close_guide_button5{
+    position: absolute;
+    right: 14px;
+    top: 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.turnOn{
+	position: absolute;
+	bottom: 5%;
+	left: 40%;
+    width: 99px;
+    height: 30px;
+    background: inherit;
+    background-color: rgba(51, 51, 51, 1);
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(51, 51, 51, 1);
+    border-radius: 71px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.996078431372549);
+    cursor: pointer;
+}
+
+#videoElement2{
+	position: absolute;
+	right: 5%;
+	top: 17%;
+	border-radius: 5px;
+	width: 240px;
+	height: 180px;
+}
+
+.videoShadow{
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.increase_time{
+	display: none; 
+    position: absolute; 
+    bottom: 50%; 
+    left: 44%; 
+    width: 305px; 
+    height: 187px; 
+    border: 10x solid black; 
+    background-color: white; 
+    z-index:1002; 
+    overflow: none;
+}
+
+.light9{
+	display: block;
+}
+
+.close_guide_button6{
+    /* position: absolute;
+    right: 14px;
+    top: 0px; */
+    font-size: 20px;
+    cursor: pointer;
+	float: right;
+	width: 15px;
+}
+
+.increase_time span{
+	text-align: center;
+}
+
+#increasetime{
+	float: left;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.confirm{
+	float: left;
+    margin-top: 78px;
+    margin-left: 107px;
+    width: 100px;
+    height: 35px;
+	background: inherit;
+    background-color: rgba(51, 51, 51, 1);
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(51, 51, 51, 1);
+    border-radius: 71px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 35%);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.996078431372549);
+}

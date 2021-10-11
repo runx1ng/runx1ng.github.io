@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <title>Homepage</title>
+</head>
+<body>
+    <img class="home" src="images/home.png" alt="home_header">
+    <a href="login.html" class="account"></a>
+    <img class="rabbit" src="images/rabbit1.png" alt="guide_rabbit">
+    <div id="light3" class="guide_div">
+        <div class="guide_text">
+            <div class="close_guide_button">&times;</div>
+            <div class="text1">
+                Welcome to Online Study Room.  This is a great space that allows you and your friends to study online together.  Also, I will supervise your study!
+            </div>
+            <div class="next">&#8680;</div>
+        </div>
+    </div>
+    <img class="rabbit2" src="images/rabbit2.png" alt="guide_rabbit2">
+    <div id="light4" class="guide_div2">
+        <div class="guide_text2">
+            <div class="close_guide_button2">&times;</div>
+            <span>You can create your own study room here!</span>
+            <div class="back">&#8678;</div>
+            <div class="next2">&#8680;</div>
+        </div>
+    </div>
+    <img class="rabbit3" src="images/rabbit3.png" alt="guide_rabbit3">
+    <div id="light5" class="guide_div3">
+        <div class="guide_text3">
+            <div class="close_guide_button3">&times;</div>
+            <span>Or you can join other's study room.</span>
+            <div class="back2">&#8678;</div>
+            <div class="next3">&#8680;</div>
+        </div>
+    </div>
+    <img class="rabbit4" src="images/rabbit3.png" alt="guide_rabbit4">
+    <div id="light6" class="guide_div4">
+        <div class="guide_text4">
+            <div class="close_guide_button4">&times;</div>
+            <span>You can create an account and log in here.</span>
+            <div class="back3">&#8678;</div>
+            <div class="next4">&#8680;</div>
+        </div>
+    </div>
+    <img class="rabbit5" src="images/rabbit4.png" alt="guide_rabbit5">
+    <div id="light7" class="guide_div5">
+        <div class="guide_text5">
+            <span>So now, start your learning~ I will always be with you.</span>
+            <div class="repeat">Repeat</div>
+            <div class="end">Ok</div>
+        </div>
+    </div>
+
+    <div class="room_container">
+        <div class="create_room">
+            <img src="images/create.png" alt="create_room">
+            <div class="create_text">
+                <span class="span1">Create a New Room</span>
+                <span class="span2">Study Alone or Invite Your Partners</span>
+                <button class="create">Create</button>
+            </div>
+        </div>
+        <div class="join_room">
+            <img src="images/join.png" alt="join_room">
+            <div class="join_text">
+                <span class="span3">Join in an Existing Room</span>
+                <span class="span4">Study with your Peers</span>
+                <button class="join">Join</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="light" class="popup">
+        <div class="close_button">&times;</div>
+        <div class="room_type">
+            <label>Private
+                <input class="private" type="checkbox" name="private">
+            </label>
+            <label>Public
+                <input type="checkbox">
+            </label>
+        </div>
+        <div class="room_info">
+            <label>Number of people:</label>
+            <input type="text">
+            <span>(Maxium is 6)</span>
+            <br>
+            <label>Time Setting:</label>
+            <input id="time" type="time" step='1' min="00:00:00" max="24:00:00">
+        </div>
+        <div class="device">
+
+        </div>
+        <button class="confirm_create">Create</button>
+    </div>
+    <div id="light2" class="popup2">
+        <div class="close_button2">&times;</div>
+        <img src="images/join2.png" alt="join_other_rooms">
+        <div class="room_type">
+            <label>Private
+                <input type="checkbox">
+            </label>
+            <label>Public
+                <input type="checkbox">
+            </label>
+        </div>
+        <button class="confirm_join">Join</button>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+    <div id="fade1" class="black"></div>
+</body>
+</html>
