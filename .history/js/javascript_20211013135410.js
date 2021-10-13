@@ -191,8 +191,8 @@ $(document).ready(function(){
 
         if (private && public && errorCount == 0) {
             $('.popup').append("<p class='errorMessage'>Please select either private or public</p>")
-            errorCount = 1;
-        }else if(private && !public){
+            count = 1;
+        }else if(private){
             window.location = "main.html";
         }
     })

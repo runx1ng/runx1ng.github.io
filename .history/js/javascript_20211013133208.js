@@ -183,16 +183,14 @@ $(document).ready(function(){
         localStorage.setItem("roomID", roomId);
     });
 
-    var errorCount = 0;
     $('.confirm_create').click(function(){
         var private =  $('.private').is(':checked');
         var public = $('.public').is(':checked');
         // console.log(private);
 
-        if (private && public && errorCount == 0) {
-            $('.popup').append("<p class='errorMessage'>Please select either private or public</p>")
-            errorCount = 1;
-        }else if(private && !public){
+        if (private && public) {
+            $('.popup').append("<p>Please select either private or public</p>")
+        }else if(private){
             window.location = "main.html";
         }
     })
@@ -406,7 +404,7 @@ $(document).ready(function(){
             }
             var time = hours + ":" + minutes + ":" + seconds;
             if (inputMessage != "") {
-                $(".textfield").append("<P>" + "[" + time + "] Helen: " + inputMessage);
+                $(".textfield").append("<P>" + time + " Helen: " + inputMessage);
             }
             e.preventDefault();
             e.currentTarget.value = "";

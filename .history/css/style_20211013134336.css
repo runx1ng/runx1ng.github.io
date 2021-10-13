@@ -380,7 +380,7 @@ input[type="submit"]:hover{
 .room_type{
     position: absolute;
     left: 28%;
-    top: 15%;
+    top: 10%;
     font-size: 20px;
 }
 
@@ -390,7 +390,7 @@ input[type="submit"]:hover{
 
 .room_info{
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 20%;
     margin-top: 25px;
 }
@@ -776,7 +776,7 @@ input[type="submit"]:hover{
 .errorMessage{
     margin: 0;
     padding-top: 10px;
-    color: #ffc107;
+    color: orange;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
