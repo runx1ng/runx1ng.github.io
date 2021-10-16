@@ -260,37 +260,37 @@ $(document).ready(function(){
     $(".close_guide_button12").click(function(){
         closeBubble6();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".close_guide_button11").click(function(){
         closeBubble7();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".close_guide_button13").click(function(){
         closeBubble8();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".close_guide_button14").click(function(){
         closeBubble9();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".close_guide_button15").click(function(){
         closeBubble10();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".close_guide_button16").click(function(){
         closeBubble11();
         localStorage.setItem("guide", 0);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".mainnext1").click(function(){
@@ -321,7 +321,7 @@ $(document).ready(function(){
     $(".mainnext6").click(function(){
         closeBubble11();
         localStorage.setItem("guide", 4);
-        window.location.href="home.html";
+        window.location.href="index.html";
     });
 
     $(".mainback1").click(function(){
