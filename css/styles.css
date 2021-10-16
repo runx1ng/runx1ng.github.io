@@ -18,6 +18,15 @@
 	cursor: pointer;
 }
 
+/* .right ul li {
+	height: 200px;
+	width: 90px;
+} */
+.mobile{
+	size: 300%;
+
+}
+
 .selected_time{
 	/* position: absolute;
 	left: 16px;
@@ -59,6 +68,98 @@
 
 }
 
+.callout-mobile, .callout-QR{
+	display: none;
+	/* display: block; */
+	position: absolute;
+	top: 30%;
+	height: 30%;
+	width: 30%;
+	/* width: 40%; */
+	/* height: 50%; */
+	background-color:whitesmoke;
+	left: 30%;
+	/* top: 20%; */
+}
+
+/* .callout-QR{
+	top: 30%;
+	height: 50%;
+	width: 30%;
+} */
+
+.callout-invite{
+	display: none;
+	/* display: block; */
+	position: absolute;
+	width: 40%;
+	height: 50%;
+	background-color:whitesmoke;
+	left: 30%;
+	top: 20%;
+}
+
+.callout-mobile h2,.callout-QR h2{
+	text-align: center;
+}
+
+.closebtn{
+	float: right;
+	margin-right: 6%;
+	margin-top: 2%;
+	font-size: 200%;
+}
+
+.callout-mobile p, .callout-QR P{
+	color: black;
+}
+
+.callout-container{
+	margin: 5%;
+	margin-top: 10%
+}
+
+.callout-invite .callout-container{
+	margin-top:10%
+}
+
+.callout-invite h3{
+	text-align: center;
+}
+
+.callout-button{
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+	/* padding-right: 20%; */
+}
+
+.callout-invite .callout-button{
+	position: absolute;
+	margin-top: 20%;
+	right: 10%;
+	bottom: 5%;
+	/* padding-right: 20%; */
+}
+/* .callout-button div{
+	margin-right: 5%;
+} */
+.callout-code{
+	display: none;
+	position: absolute;
+	border-style: solid;
+	border-color: #111;
+	top: 20%;
+	left: 75%;
+}
+
+.callout-code img{
+	height: 35%;
+	width: 35%;
+	padding: 2%;
+}
+
+
 .guide{
 
 	/* position: absolute; */
@@ -88,6 +189,65 @@
 #nav li a:hover {
   background-color: #111;
 }
+
+.button {
+  border: none;
+  color: black;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.box{
+	position: absolute;
+	/* background-color: whitesmoke; */
+	border-style: solid;
+	top: 12%;
+	right: 0;
+	width: 25%;
+	height: 85%;
+}
+
+.partner{
+	display: none;
+	
+}
+
+.partner img{
+	
+	position: absolute;
+	right: 15%;
+	top: 36%;
+	width: 80%;
+	height: 25%;
+
+}
+
+/* .box hr{
+	
+	margin-top: 130%;
+	border: 3px solid black;
+	margin-bottom: -10%;
+} */
+
+.taskbox{
+	position: absolute;
+	bottom: 0;
+	width: 99%;
+	background-color: whitesmoke;
+	
+	height: 38%;
+}
+
+.taskbox ul li{
+	list-style-type: none;
+}
+
 
 /* camera preview*/
 .preview{
@@ -203,6 +363,8 @@
 	overflow: none;
 	text-align: center;
 }
+
+
 
 .light9{
 	display: block;

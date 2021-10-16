@@ -41,11 +41,41 @@ $(document).ready(function(){
         $(".rabbit4").css("display", "block");
     });
 
+    /* guide = 1: main page guide on
+        guide = 0: home page guide off
+        guide = 3: main page guide off
+    */
     $(".next4").click(function(){
         closeBubble4();
-        document.getElementById('fade1').style.display='block';
+        window.location.href="main.html";
+        localStorage.setItem("guide", 1);
+        localStorage.setItem("inPrivate", null);
+        // document.getElementById('fade1').style.display='block';
+        // document.getElementById('light7').style.display='block';
+        // $(".rabbit5").css("display", "block");
+    });
+
+    if(localStorage.getItem("guide") == 1){
+        openBubble10();
+        console.log(1234);
+    }
+
+    if(localStorage.getItem("guide") == 0){
+        document.getElementById('light3').style.display='none';
+        document.getElementById('fade1').style.display='none';
+        $(".rabbit").css("display", "none");
+    }
+
+    if(localStorage.getItem("guide") == 4){
         document.getElementById('light7').style.display='block';
+        document.getElementById('fade1').style.display='block';
+        document.getElementById('light3').style.display='none';
+        $(".rabbit").css("display", "none");
         $(".rabbit5").css("display", "block");
+    }
+
+    $(".repeatguide").click(function(){
+        openBubble();
     });
 
     $(".close_guide_button2").click(function(){
@@ -79,10 +109,10 @@ $(document).ready(function(){
         openBubble3();
     });
 
-    $('.repeat').click(function(){
-        closeBubble5();
-        openBubble();
-    });
+    // $('.repeat').click(function(){
+    //     closeBubble5();
+    //     openBubble();
+    // });
 
     function openDialog(){
         document.getElementById('light').style.display='block';
@@ -153,6 +183,167 @@ $(document).ready(function(){
         $(".rabbit5").css("display", "none");
     }
 
+    /* mainpage guide popup functions*/
+
+    function openBubble6(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light12').style.display='block';
+        $(".mainrabbit").css("display", "block");
+    }
+
+    function closeBubble6(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light12').style.display='none';
+        $(".mainrabbit").css("display", "none");
+    }
+
+    function openBubble7(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light11').style.display='block';
+        $(".mainrabbit2").css("display", "block");
+    }
+
+    function closeBubble7(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light11').style.display='none';
+        $(".mainrabbit2").css("display", "none");
+    }
+
+    function openBubble8(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light13').style.display='block';
+        $(".mainrabbit3").css("display", "block");
+    }
+
+    function closeBubble8(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light13').style.display='none';
+        $(".mainrabbit3").css("display", "none");
+    }
+
+    function openBubble9(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light14').style.display='block';
+        $(".mainrabbit4").css("display", "block");
+    }
+
+    function closeBubble9(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light14').style.display='none';
+        $(".mainrabbit4").css("display", "none");
+    }
+
+    function openBubble10(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light15').style.display='block';
+        $(".mainrabbit5").css("display", "block");
+    }
+
+    function closeBubble10(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light15').style.display='none';
+        $(".mainrabbit5").css("display", "none");
+    }
+
+    function openBubble11(){
+        document.getElementById('fade2').style.display='block';
+        document.getElementById('light16').style.display='block';
+        $(".mainrabbit6").css("display", "block");
+    }
+
+    function closeBubble11(){
+        document.getElementById('fade2').style.display='none';
+        document.getElementById('light16').style.display='none';
+        $(".mainrabbit6").css("display", "none");
+    }
+
+    $(".close_guide_button12").click(function(){
+        closeBubble6();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".close_guide_button11").click(function(){
+        closeBubble7();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".close_guide_button13").click(function(){
+        closeBubble8();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".close_guide_button14").click(function(){
+        closeBubble9();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".close_guide_button15").click(function(){
+        closeBubble10();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".close_guide_button16").click(function(){
+        closeBubble11();
+        localStorage.setItem("guide", 0);
+        window.location.href="home.html";
+    });
+
+    $(".mainnext1").click(function(){
+        closeBubble6();
+        openBubble7();
+    });
+    
+    $(".mainnext2").click(function(){
+        closeBubble7();
+        openBubble8();
+    });
+
+    $(".mainnext3").click(function(){
+        closeBubble8();
+        openBubble9();
+    });
+
+    $(".mainnext5").click(function(){
+        closeBubble10();
+        openBubble6();
+    });
+
+    $(".mainnext4").click(function(){
+        closeBubble9();
+        openBubble11();
+    });
+
+    $(".mainnext6").click(function(){
+        closeBubble11();
+        localStorage.setItem("guide", 4);
+        window.location.href="home.html";
+    });
+
+    $(".mainback1").click(function(){
+        closeBubble6();
+        openBubble10();
+    });
+
+    $(".mainback2").click(function(){
+        closeBubble7();
+        openBubble6();
+    });
+
+    $(".mainback3").click(function(){
+        closeBubble8();
+        openBubble7();
+    });
+
+    $(".mainback4").click(function(){
+        closeBubble9();
+        openBubble8();
+    });
+
     //display chat
     var chatdisplay = 0
     $('.chat').click(function(){
@@ -193,9 +384,15 @@ $(document).ready(function(){
             $('.popup').append("<p class='errorMessage'>Please select either private or public</p>")
             errorCount = 1;
         }else if(private && !public){
+            localStorage.setItem("guide", 3);
             window.location = "main.html";
         }
     })
+
+    if(localStorage.getItem("guide") == 3){
+        closeBubble10();
+        console.log(12345);
+    }
 
     //change duration
     $('.confirm').click(function(){
@@ -263,7 +460,7 @@ $(document).ready(function(){
     $(".camera").click(function(){
         if(cam == 0){
             document.getElementById('light8').style.display='block';
-            document.getElementById('fade1').style.display='block';
+            document.getElementById('fade2').style.display='block';
             navigator.mediaDevices.getUserMedia({
                 video: true
                 })
@@ -290,7 +487,7 @@ $(document).ready(function(){
     //close popup preview 
     function closePreview(){
         document.getElementById('light8').style.display='none';
-        document.getElementById('fade1').style.display='none';
+        document.getElementById('fade2').style.display='none';
         cam = 0;
     }
 
@@ -383,6 +580,7 @@ $(document).ready(function(){
     // });
 
     window.onbeforeunload = function(e){
+        // localStorage.removeItem("guide");
         // localStorage.removeItem("time");
         // localStorage.removeItem("roomID");
         // localStorage.removeItem("amount");

@@ -5,12 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="./js/scipt_studyroom.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
     <title>Study alone</title>
 </head>
 <body>
+    <img class="mainrabbit5" src="Images/rabbit3.png" alt="main_guide_rabbit5">
+    <div id="light15" class="guide_div15" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text15">
+            <div class="close_guide_button15">&times;</div>
+            <span>The first thing after you enter the private room is to edit your daily study task by clicking this button</span>
+            <div class="mainback5">&#8678;</div>
+            <div class="mainnext5">&#8680;</div>
+        </div>
+    </div>
+    <img class="mainrabbit" src="Images/rabbit2.png" alt="main_guide_rabbit">
+    <div id="light12" class="guide_div12" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text12">
+            <div class="close_guide_button12">&times;</div>
+            <span>Here you can set the time how long you want to study. Don't forget to turn on the camera during the study~</span>
+            <div class="mainback1">&#8678;</div>
+            <div class="mainnext1">&#8680;</div>
+        </div>
+    </div>
+    <img class="mainrabbit2" src="Images/rabbit2.png" alt="main_guide_rabbit2">
+    <div id="light11" class="guide_div11" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text11">
+            <div class="close_guide_button11">&times;</div>
+            <span>You can also use voice or text to chat with friends when you have any questions</span>
+            <div class="mainback2">&#8678;</div>
+            <div class="mainnext2">&#8680;</div>
+        </div>
+    </div>
+    <img class="mainrabbit3" src="Images/rabbit4.png" alt="main_guide_rabbit3">
+    <div id="light13" class="guide_div13" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text13">
+            <div class="close_guide_button13">&times;</div>
+            <span>Click here to invite your friends to study with you. Mutual supervision can make learning more efficient.</span>
+            <div class="mainback3">&#8678;</div>
+            <div class="mainnext3">&#8680;</div>
+        </div>
+    </div>
+    <img class="mainrabbit4" src="Images/rabbit4.png" alt="main_guide_rabbit4">
+    <div id="light14" class="guide_div14" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text14">
+            <div class="close_guide_button14">&times;</div>
+            <span>Before you start learning. Please scan the QR code with your mobile phone and add websites, and then your mobile phone and websites will be locked. this will help you concentrate on your study</span>
+            <div class="mainback4">&#8678;</div>
+            <div class="mainnext4">&#8680;</div>
+        </div>
+    </div>
+    <img class="mainrabbit6" src="Images/rabbit6.png" alt="main_guide_rabbit6">
+    <div id="light16" class="guide_div16" style="border-radius: 8px; border: 1px solid black;">
+        <div class="guide_text16">
+            <div class="close_guide_button16">&times;</div>
+            <span>When you study, I ill always be with you and supervise you.</span>
+            <div class="mainback6">&#8678;</div>
+            <div class="mainnext6">&#8680;</div>
+        </div>
+    </div>
     <div class="left">
         <ul id="nav_left">
         <li>
@@ -72,19 +127,16 @@
     <div class="right">
         <ul id="nav_left">
         <li>
-            <img src="./Images/log.png" alt="log">
+            <a href="#"><img id="mobile" src="./Images/mobile_unlock.jpg" alt="mobile" onclick="qrDisplay()" ></a>
         </li>
         <li>
-            <img src="./Images/mobile.png" alt="mobile">
+            <a href="#"><img id="internet" src="./Images/internet_unlock.jpg" alt="internet" onclick="mobileDisplay()"></a>
         </li>
         <li>
-            <img src="./Images/internet.png" alt="internet">
+            <a href="#"><img src="./Images/invite.png" alt="invite" onclick="inviteDisplay()"></a>
         </li>
         <li>
-            <img src="./Images/invite.png" alt="invite">
-        </li>
-        <li>
-            <img src="./Images/return.png" alt="return">
+            <img src="./Images/return.png" alt="return" >
         </li>
         <li>
             <div>
@@ -105,16 +157,89 @@
         </a>
     </div>
 
+    <div class="box">
+        <div class="partner">
+            
+            <img src="./images/partner1.png" alt="partner1">
+
+        </div>
+        <!-- <hr /> -->
+        <div class="taskbox">
+            <h2>My Task List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+            <ul id="myUL">
+                <li>Python assignment3</li>
+                <li class="checked">DECO3500 assignment2</li>
+            </ul>
+        </div>
+
+    </div>
+
 
 
     
     
 
-    <div id="fade1" class="black"></div>
+    <div id="fade2" class="black"></div>
+    <!-- <div id="fade2" class="black"></div> -->
 </body>
 <footer>
     <div id="One">
-        <img src="./Images/One.png" alt="One">
+        <img src="./images/One.png" alt="One">
+    </div>
+    <!-- 弹出窗口 - mobile -->
+    <div class="callout-mobile">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <h2>Authorization</h2>
+        <div class="callout-container">
+        <p>Accept to lock all your tab pages which are not included in the white list.</p>
+        
+        </div>
+        <div class="callout-button">
+            <button class="button" onclick="lockInternet()">Accept</button>
+            <button class="button">Edit whiteboard</button>
+            <button class="button">Deny</button>
+        </div>
+    </div>
+    <div class="callout-QR">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <h2>Authorization</h2>
+        <div class="callout-container">
+        <p>Accept to lock all your mobile apps which are not included in the white list.</p>
+        </div>
+        <div class="callout-button">
+            <!-- <p class="button">Accept</p>
+            <p class="button">Accept</p> -->
+            <button class="button" onclick="accept()">Accept</button>
+            <button class="button">Edit whiteboard</button>
+            <button class="button">Deny</button>
+        </div>
+    </div>
+    <div class="callout-code">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <img src="./images/code.png" alt="code">
+        <p> Scan to lock your mobile phone</p>
+    </div>
+    <!-- <div class="partner">
+        <img src="./images/partner1.png" alt="partner1">
+
+    </div> -->
+
+    <!-- 弹出窗口 - invite friend -->
+    <div class="callout-invite">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <h2>Invite your friend</h2>
+        <div class="callout-container">
+        <h4>Email Address: <input type="text" style="width: 100%;"></h4>
+        <h3>OR</h3>
+        <h4>Invitation link: <h5>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h5> </h4>
+        </div>
+        <div class="callout-button">
+            <button class="button" onclick="partnerDisplay()">Accept</button>
+            <button class="button">Edit whiteboard</button>
+            <button class="button">Deny</button>
+        </div>
     </div>
     
 </footer>
