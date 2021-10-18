@@ -99,6 +99,38 @@
 	top: 20%;
 }
 
+.input{
+	border-bottom:1px solid #000 ;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	background-color: whitesmoke;
+}
+
+
+
+#date{
+	
+	margin-top: 2%;
+	box-sizing: border-box;
+}
+
+#time{
+	margin-top: 20%;
+}
+
+.callout-task{
+	display: none;
+	/* display: block; */
+	position: absolute;
+	width: 35%;
+	height: 50%;
+	background-color:whitesmoke;
+	left: 25%;
+	padding-left: 5%;
+	top: 20%;
+}
+
 .callout-mobile h2,.callout-QR h2{
 	text-align: center;
 }
@@ -108,6 +140,11 @@
 	margin-right: 6%;
 	margin-top: 2%;
 	font-size: 200%;
+}
+
+#list{
+	width: 99%;
+	height: 63%;
 }
 
 .callout-mobile p, .callout-QR P{
@@ -237,11 +274,17 @@
 
 .taskbox{
 	position: absolute;
+	/* top: 58%; */
 	bottom: 0;
 	width: 99%;
 	background-color: whitesmoke;
 	
 	height: 38%;
+}
+
+.addBtn{
+	position: absolute;
+	z-index: 99;
 }
 
 .taskbox ul li{
@@ -451,5 +494,18 @@
     color: rgba(255, 255, 255, 0.996078431372549);
 	cursor: pointer;
 }
+
+.taskbox h2{
+	margin-left: 10%;
+	
+}
+.taskbox h2 button{
+	margin-left: 10%;
+
+}
+
+/* Reference
+1. https://www.w3schools.com/html/default.asp
+2. https://www.w3schools.com/css/default.asp */
 
 

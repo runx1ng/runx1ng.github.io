@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-    <script src="./js/scipt_studyroom.js"></script>
+    <script type="text/javascript" src="./js/scipt_studyroom.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/tasklist.js"></script>
     <title>Study alone</title>
 </head>
 <body>
@@ -136,7 +137,7 @@
             <a href="#"><img src="./Images/invite.png" alt="invite" onclick="inviteDisplay()"></a>
         </li>
         <li>
-            <img src="./Images/return.png" alt="return" >
+            <a href="./home.html"><img src="./Images/return.png" alt="return" ></a>
         </li>
         <li>
             <div>
@@ -149,13 +150,13 @@
     </div>
 
     
-    <div class="guide">
+    <!-- <div class="guide">
         <a href="./guide.html" target="_blank">
             
             <img src="./Images/r.png" alt="guide" id="rb">
 
         </a>
-    </div>
+    </div> -->
 
     <div class="box">
         <div class="partner">
@@ -165,14 +166,16 @@
         </div>
         <!-- <hr /> -->
         <div class="taskbox">
-            <h2>My Task List</h2>
-            <input type="text" id="myInput" placeholder="Title...">
-            <span onclick="newElement()" class="addBtn">Add</span>
-            <ul id="myUL">
-                <li>Python assignment3</li>
-                <li class="checked">DECO3500 assignment2</li>
-            </ul>
+            <h2>My Task List
+                <button onclick="taskDisplay()" class="addBtn">Add</button>
+            </h2>
+            <!-- <img id="list" src="./images/list.png" alt="list"> -->
+
+            <div id="text">
+
+            </div>
         </div>
+      
 
     </div>
 
@@ -186,7 +189,11 @@
 </body>
 <footer>
     <div id="One">
+<<<<<<< Updated upstream
         <img src="./Images/One.png" alt="One">
+=======
+        <img id="invite" src="./Images/One.png" alt="One">
+>>>>>>> Stashed changes
     </div>
     <!-- 弹出窗口 - mobile -->
     <div class="callout-mobile">
@@ -241,6 +248,44 @@
             <button class="button">Deny</button>
         </div>
     </div>
+    <div class="callout-task">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <h2>Add Your Daily Task</h2>
+        <form action="/action_page.php">
+            <label for="title">Title</label><br>
+            <input class="input" id="title" type="text" name="title"><br> 
+        </form>
+        <br>
+        
+        <form id="dateSelect" action="/action_page.php">
+            <label for="date">Date:</label>
+            <br>
+            <input type="date" id="date" name="date">
+            <br>
+            <br>
+            <input type="time" id="time1" name="time">
+            <input type="time" id="time2" name="time">
+            <input type="submit" value="Submit">
+            
+            
+        </form>
+
+
+
+        
+        <div class="callout-button">
+            
+            <button class="create_button" onclick="this.parentElement.parentElement.style.display='none';">Create</button>
+        </div>
+    </div>
     
 </footer>
 </html>
+<<<<<<< Updated upstream
+=======
+
+<!-- Reference -->
+<!-- 1. https://www.w3schools.com/html/default.asp
+2. https://www.w3schools.com/css/default.asp
+3. https://www.w3schools.com/js/default.asp -->
+>>>>>>> Stashed changes
