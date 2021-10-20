@@ -140,7 +140,6 @@
 	margin-right: 6%;
 	margin-top: 2%;
 	font-size: 200%;
-	cursor: pointer;
 }
 
 #list{
@@ -174,7 +173,7 @@
 
 .callout-invite, .callout-button{
 	position: absolute;
-	margin-top: 2%;
+	margin-top: 20%;
 	right: 10%;
 	bottom: 5%;
 	/* padding-right: 20%; */
@@ -290,7 +289,6 @@
 
 #text{
 	margin-top: -6%;
-	font-size: 120%;
 	font-style:oblique;
 	color:dodgerblue;
 	text-decoration:none;

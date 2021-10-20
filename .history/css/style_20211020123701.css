@@ -1062,6 +1062,7 @@ input[type="submit"]:hover{
 .guide_text17 span{
     font-size: 14px;
     position: absolute;
+    top: 20px;
 }
 
 .congratulation{

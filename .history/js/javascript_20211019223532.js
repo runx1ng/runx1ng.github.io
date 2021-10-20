@@ -257,24 +257,6 @@ $(document).ready(function(){
         $(".mainrabbit6").css("display", "none");
     }
 
-    function openBubble11(){
-        document.getElementById('fade2').style.display='block';
-        document.getElementById('light17').style.display='block';
-        $(".mainrabbit7").css("display", "block");
-    }
-
-    function closeBubble11(){
-        document.getElementById('fade2').style.display='none';
-        document.getElementById('light17').style.display='none';
-        $(".mainrabbit7").css("display", "none");
-    }
-
-    $(".congratulation").click(function(){
-        $(".guide_text17 span").empty();
-        closeBubble11();
-    });
-
-
     $(".close_guide_button12").click(function(){
         closeBubble6();
         localStorage.setItem("guide", 0);
@@ -387,18 +369,9 @@ $(document).ready(function(){
         time = $('#time').val();
         localStorage.setItem("time", time);
         var amount = $(".amount").val();
-        if(amount > 6){
-            alert("You cannot create a room with more than 6 people");
-        }else if(amount < 1){
-            alert("You need to at least create a room with 1 person");
-        }
         localStorage.setItem("amount", amount);
         var roomId = Math.floor(100 + Math.random() * 900);
         localStorage.setItem("roomID", roomId);
-    });
-
-    $(".confirm_join").click(function(){
-        window.location.href="https://b70mdy.axshare.com/#id=7hq1eh&p=study_in_pubilc&g=1&sc=3";
     });
 
     var errorCount = 0;
@@ -407,14 +380,14 @@ $(document).ready(function(){
         var public = $('.public').is(':checked');
         var email = localStorage.getItem("email");
         // console.log(private);
-        var people = $(".amount").val();
+
         if (email == null) {
             alert("Please sign in before creating a new room");
         }
         if (private && public && errorCount == 0) {
             $('.popup').append("<p class='errorMessage'>Please select either private or public</p>")
             errorCount = 1;
-        }else if(private && !public && email != null && people <= 6){
+        }else if(private && !public && email != null){
             localStorage.setItem("guide", 3);
             window.location = "main.html";
         }
@@ -443,41 +416,45 @@ $(document).ready(function(){
 
     //countdown function
     var countDownTime = localStorage.getItem("time");
-    // if(localStorage.getItem("time") === "00:00:00"){
-    //     alert("123");
-    // }
     var interval = setInterval(function(){
         if(countDownTime == null){
             return;
-        }
-        if(countDownTime == "00:00:00"){
-            $(".guide_text17 span").append("Congratulations! You have been studying for a long period of time and completed all assignments! Good Job!");
-            openBubble11();
         }
         var timer = countDownTime.split(':');
         var hours = parseInt(timer[0], 10);
         var minutes = parseInt(timer[1], 10);
         var seconds = parseInt(timer[2], 10);
+        if(seconds >= 1){
+            --seconds;
+        }
+        if(seconds == 0){
+            --minutes;
+        }
+        if(minutes == 0){
+            --hours;
+        }
         if(hours == 0 && minutes == 0 && seconds == 0){
             countDownTime = 00 + ":" + 00 + ":" + 00;
-        }else{
-            --seconds;
-            minutes = (seconds < 0) ? --minutes : minutes;
-            hours = (minutes < 0) ? --hours : hours;
-            hours = (hours < 10)? '0' + hours : hours;
-            minutes = (minutes < 0) ? 59 : minutes;
-            minutes = (minutes < 10)? '0' + minutes : minutes;
-            // if(hours == 0 && minutes == 0 && seconds <= 0) clearInterval(interval);
-            seconds = (seconds < 0) ? 59 : seconds;
-            seconds = (seconds < 10)? '0' + seconds : seconds;
-            countDownTime = hours + ":" + minutes + ":" + seconds;
+            localStorage.setItem("item", countDownTime);
         }
-        $(".selected_time").html(hours + ':' + minutes + ':' + seconds);
+        minutes = (seconds < 0) ? --minutes : minutes;
+        hours = (minutes < 0) ? --hours : hours;
+        hours = (hours < 10)? '0' + hours : hours;
+        minutes = (minutes < 0) ? 59 : minutes;
+        minutes = (minutes < 10)? '0' + minutes : minutes;
+        if(hours < 0) clearInterval(interval);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10)? '0' + seconds : seconds;
+        if(hours < 0 && minutes < 0 && seconds < 0){
+            countDownTime = 00 + ":" + 00 + ":" + 00;
             localStorage.setItem("time", countDownTime);
+        }else{
+            $(".selected_time").html(hours + ':' + minutes + ':' + seconds);
+            countDownTime = hours + ":" + minutes + ":" + seconds;
+            localStorage.setItem("time", countDownTime);
+        }
         
     }, 1000);
-
-    
 
     //mic close
     var off = 0;
@@ -657,10 +634,7 @@ $(document).ready(function(){
     });
 
 
-   $(".return").click(function(){
-       localStorage.setItem("guide", 0);
-       window.location.href="index.html";
-   });
+   
     
 
 });

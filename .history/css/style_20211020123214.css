@@ -1049,8 +1049,8 @@ input[type="submit"]:hover{
 .guide_div17{
     display: none; 
     position: absolute; 
-    bottom: 27%;
-    right: 38%; 
+    bottom: 50%;
+    right: 10%; 
     width: 240px; 
     height: 75px; 
     border: 10x solid black; 
@@ -1062,12 +1062,14 @@ input[type="submit"]:hover{
 .guide_text17 span{
     font-size: 14px;
     position: absolute;
+    top: 20px;
 }
 
-.congratulation{
+.close_guide_button17{
     position: absolute;
-    right: 14px;
-    bottom: 4px;
+    right: 15px;
+    top: -2px;
+    font-size: 20px;
     cursor: pointer;
 }
 

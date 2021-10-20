@@ -58,11 +58,6 @@ function taskDisplay() {
     
 }
 
-function lineThrough() {
-    document.getElementById("text").style.textDecoration = "line-through";
-}
-
-
 
 // Reference
 // 1. https://www.w3schools.com/js/default.asp

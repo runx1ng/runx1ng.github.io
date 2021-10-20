@@ -10,6 +10,8 @@ $(document).ready(function(){
         document.getElementsByClassName("callout-task")[0].display='none';
         if(message1 != ""){
             $("#text").append("<p></p>");
+            $("#text").append("<label for='mycheck'>"+"- "+message1+"</label>");
+            $("#text").append("<input type='checkbox' id='myCheck' onclick='myFunction()'>");
             // $("#text").append("<label for='mycheck'>"+"- "+message1+"</label>");
             // $("#text").append("<input type='checkbox' id='myCheck' onclick='myFunction()'>");
             $("#text").append("<a href='#'><div onclick='lineThrough()'>"+message1+"</div>"+"</a>")

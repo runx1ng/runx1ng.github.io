@@ -387,11 +387,6 @@ $(document).ready(function(){
         time = $('#time').val();
         localStorage.setItem("time", time);
         var amount = $(".amount").val();
-        if(amount > 6){
-            alert("You cannot create a room with more than 6 people");
-        }else if(amount < 1){
-            alert("You need to at least create a room with 1 person");
-        }
         localStorage.setItem("amount", amount);
         var roomId = Math.floor(100 + Math.random() * 900);
         localStorage.setItem("roomID", roomId);
@@ -407,14 +402,14 @@ $(document).ready(function(){
         var public = $('.public').is(':checked');
         var email = localStorage.getItem("email");
         // console.log(private);
-        var people = $(".amount").val();
+
         if (email == null) {
             alert("Please sign in before creating a new room");
         }
         if (private && public && errorCount == 0) {
             $('.popup').append("<p class='errorMessage'>Please select either private or public</p>")
             errorCount = 1;
-        }else if(private && !public && email != null && people <= 6){
+        }else if(private && !public && email != null){
             localStorage.setItem("guide", 3);
             window.location = "main.html";
         }
@@ -657,10 +652,7 @@ $(document).ready(function(){
     });
 
 
-   $(".return").click(function(){
-       localStorage.setItem("guide", 0);
-       window.location.href="index.html";
-   });
+   
     
 
 });
