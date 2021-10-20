@@ -1,15 +1,5 @@
 $(document).ready(function(){
 
-    $(".account").click(function(){
-        console.log(123);
-        if(localStorage.getItem("email") != null){
-            window.location.href="profile.html";
-        }else{
-            window.location.href="login.html";
-        }
-    });
- 
-
     $(".create").click(function(){
         openDialog();
     });
@@ -672,6 +662,13 @@ $(document).ready(function(){
        window.location.href="index.html";
    });
 
-   
+   $(".account").click(function(){
+       if(localStorage.getItem("email") != null){
+           window.location.href="profile.html";
+       }
+       window.location.href="login.html";
+       
+   });
+
 });
 

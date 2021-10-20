@@ -4,9 +4,8 @@ $(document).ready(function(){
         console.log(123);
         if(localStorage.getItem("email") != null){
             window.location.href="profile.html";
-        }else{
-            window.location.href="login.html";
         }
+        window.location.href="login.html";
     });
  
 
