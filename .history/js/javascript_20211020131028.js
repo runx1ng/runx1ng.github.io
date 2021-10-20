@@ -271,7 +271,7 @@ $(document).ready(function(){
 
     $(".congratulation").click(function(){
         $(".guide_text17 span").empty();
-        closeBubble12();
+        closeBubble11();
     });
 
 
